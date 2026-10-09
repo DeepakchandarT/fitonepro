@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+Sitemap: https://fitone.pro/sitemap.xml
