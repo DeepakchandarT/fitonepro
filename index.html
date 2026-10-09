@@ -2,781 +2,695 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FitOne Pro — Smart Gym Vending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0b08">
+<meta name="color-scheme" content="dark">
+<title>FitOne.pro | Intelligent Fitness &amp; Wellness Ecosystem</title>
+<meta name="description" content="FitOne.pro connects fitness, nutrition, personalised motivation, health rewards and smart vending into one intelligent wellness ecosystem.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="FitOne.pro">
+<meta name="application-name" content="FitOne.pro">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://fitone.pro/">
+<link rel="alternate" hreflang="en-IN" href="https://fitone.pro/">
+<link rel="alternate" hreflang="x-default" href="https://fitone.pro/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://fitone.pro/sitemap.xml">
+<link rel="alternate" type="text/plain" title="FitOne information for AI systems" href="https://fitone.pro/llms.txt">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0b08'/%3E%3Cpath d='M16 14h36v10H28v8h20v10H28v16H16z' fill='%23c8ff00'/%3E%3C/svg%3E">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="FitOne.pro">
+<meta property="og:title" content="FitOne.pro | Intelligent Fitness &amp; Wellness Ecosystem">
+<meta property="og:description" content="Fitness, nutrition, personalised motivation, health rewards and smart vending—connected in one intelligent wellness ecosystem.">
+<meta property="og:url" content="https://fitone.pro/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FitOne.pro | Intelligent Fitness &amp; Wellness Ecosystem">
+<meta name="twitter:description" content="Fitness, nutrition, personalised motivation, health rewards and smart vending—connected in one intelligent wellness ecosystem.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://fitone.pro/#organization",
+      "name": "FitOne.pro",
+      "url": "https://fitone.pro/",
+      "description": "An intelligent fitness and wellness ecosystem connecting personal health guidance, rewards, feedback and smart vending."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://fitone.pro/#website",
+      "url": "https://fitone.pro/",
+      "name": "FitOne.pro",
+      "description": "Health intelligence that moves with you.",
+      "publisher": { "@id": "https://fitone.pro/#organization" },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://fitone.pro/#application",
+      "name": "FitOne",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "url": "https://fitone.pro/",
+      "description": "A health intelligence experience that turns activity, nutrition, goals, history and consistency into simple next actions."
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --lime: #C8FF00;
-    --dark: #0A0A0A;
-    --charcoal: #141414;
-    --card: #1A1A1A;
-    --muted: #888;
-    --white: #FAFAFA;
-  }
+:root{--lime:#c8ff00;--lime-d:#6f8f00;--bg:#0a0b08;--panel:#12150f;--panel2:#181c13;--text:#f6f8f1;--muted:#98a08c;--line:rgba(200,255,0,.18);--hair:rgba(255,255,255,.08);--ease:cubic-bezier(.2,.8,.2,1);
+--disp:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);height:auto}
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:400 16px/1.6 var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--disp);text-transform:uppercase;font-weight:900}
+.wrap{width:min(1160px,calc(100% - 40px));margin:auto;position:relative}
+.lime{color:var(--lime)}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--lime);transform:scaleX(0);transform-origin:left;z-index:60;box-shadow:0 0 14px var(--lime)}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* nav */
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;padding:16px clamp(20px,5vw,60px);display:flex;align-items:center;justify-content:space-between;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(10,11,8,.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:var(--hair)}
+.logo{font:900 27px var(--disp);letter-spacing:2px;text-decoration:none}.logo span{color:var(--lime)}
+nav ul{display:flex;gap:6px;list-style:none}
+nav ul a{font-size:13px;color:var(--muted);text-decoration:none;padding:8px 13px;border-radius:99px;transition:.3s}
+nav ul a:hover{color:var(--text)}nav ul a.on{color:var(--bg);background:var(--lime)}
+.navcta{background:var(--lime);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:600;font-size:13px;text-decoration:none;transition:.3s var(--ease)}
+.navcta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(200,255,0,.25)}
 
-  html { scroll-behavior: smooth; }
+/* hero */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;overflow:hidden;padding:130px 0 90px;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,255,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(200,255,0,.06) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 50% 40%,#000,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000,transparent 75%);animation:grid 26s linear infinite}
+@keyframes grid{to{background-position:72px 72px}}
+.orb{position:absolute;left:50%;top:42%;width:760px;max-width:140vw;aspect-ratio:1;margin:-380px 0 0 -380px;border-radius:50%;background:radial-gradient(circle,rgba(200,255,0,.17),transparent 66%);animation:breathe 6s ease-in-out infinite;will-change:transform}
+@keyframes breathe{50%{transform:scale(1.14);opacity:.7}}
+.tag{display:inline-flex;align-items:center;gap:9px;color:var(--lime);border:1px solid var(--line);padding:8px 15px;border-radius:99px;font-size:13px;background:rgba(200,255,0,.04)}
+.dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 16px var(--lime);animation:pulse 1.7s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.hero h1{font-size:clamp(60px,11vw,140px);line-height:.86;letter-spacing:-2px;margin:28px auto;max-width:1000px}
+.ln{display:block;overflow:hidden;padding:.04em 0}.ln>span{display:block;transform:translateY(110%);animation:rise 1s var(--ease) forwards;animation-delay:calc(.15s + var(--i)*.14s)}
+@keyframes rise{to{transform:none}}
+.outline{-webkit-text-stroke:1.6px var(--lime);color:transparent}
+.hero p.sub{max-width:620px;margin:auto;color:var(--muted);font-size:clamp(16px,2vw,19px);opacity:0;animation:fade 1s .85s forwards}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px;opacity:0;animation:fade 1s 1.05s forwards}
+@keyframes fade{to{opacity:1}}
+.btn{display:inline-block;padding:15px 26px;border-radius:99px;text-decoration:none;font-size:14px;font-weight:500;border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--text);cursor:pointer;font-family:inherit;transition:.35s var(--ease)}
+.btn:hover{transform:translateY(-3px);border-color:var(--lime)}
+.btn.primary{background:var(--lime);color:var(--bg);border-color:var(--lime);font-weight:600}
+.btn.primary:hover{box-shadow:0 14px 44px rgba(200,255,0,.28)}
+.scrollcue{position:absolute;bottom:22px;left:0;right:0;font-size:12px;color:#7a8070;display:flex;flex-direction:column;align-items:center;gap:10px}
+.scrollcue i{width:1px;height:44px;background:linear-gradient(var(--lime),transparent);animation:cue 1.8s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-  body {
-    background: var(--dark);
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    overflow-x: hidden;
-    cursor: none;
-  }
+.marquee{overflow:hidden;border-block:1px solid var(--hair);padding:17px 0;background:#0d0f0a}
+.marquee-track{display:flex;width:max-content;gap:34px;animation:mq 26s linear infinite;font:700 19px var(--disp);letter-spacing:2px;color:#6d7363;text-transform:uppercase}
+.marquee-track b{color:var(--lime);font-weight:500}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-  /* CUSTOM CURSOR */
-  .cursor {
-    width: 14px; height: 14px;
-    background: var(--lime);
-    border-radius: 50%;
-    position: fixed; top: 0; left: 0;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
-    mix-blend-mode: difference;
-  }
-  .cursor.expand { width: 40px; height: 40px; }
+/* shared */
+section{position:relative}
+.pad{padding:clamp(80px,12vw,140px) 0}
+.kicker{font-size:14px;color:var(--lime);margin-bottom:16px;display:flex;align-items:center;gap:12px;font-weight:500}
+.kicker:before{content:"";width:26px;height:1px;background:var(--lime)}
+.title{font-size:clamp(42px,7vw,84px);line-height:.92;max-width:860px}
+.lead{color:var(--muted);max-width:600px;margin-top:22px;font-size:17px}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+.card{border:1px solid var(--hair);border-radius:24px;background:linear-gradient(150deg,var(--panel2),#0e100b);position:relative;overflow:hidden}
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 48px;
-    background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
-  }
+/* story loop */
+.steps{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
+.steps:before{content:"";position:absolute;left:8%;right:8%;top:42px;height:1px;background:linear-gradient(90deg,var(--lime),var(--lime));transform:scaleX(0);transform-origin:left;transition:transform 1.8s .3s var(--ease);opacity:.4}
+.steps.in:before{transform:scaleX(1)}
+.step{padding:26px;min-height:200px;transition:.4s var(--ease)}
+.step:hover{transform:translateY(-6px);border-color:var(--line)}
+.step b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--lime);color:var(--bg);font:900 17px var(--disp);margin-bottom:26px;position:relative;z-index:2}
+.step h3{font-size:26px;margin-bottom:8px}.step p{color:var(--muted);font-size:14px}
 
-  .logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: 26px;
-    letter-spacing: 2px;
-    color: var(--white);
-    text-decoration: none;
-  }
-  .logo span { color: var(--lime); }
+/* day */
+.stage{margin-top:44px;display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+.phone{padding:26px;min-height:470px;transform-style:preserve-3d;transition:transform .2s linear}
+.phone-top{display:flex;justify-content:space-between;font-size:12px;color:#929889}
+.ringbox{display:grid;place-items:center;margin:26px 0;position:relative}
+.ring{width:190px;height:190px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12;stroke-linecap:round}
+.ring .bgc{stroke:#24281e}.ring .fg{stroke:var(--lime);stroke-dasharray:440;stroke-dashoffset:440;transition:stroke-dashoffset 2s .3s var(--ease);filter:drop-shadow(0 0 8px rgba(200,255,0,.45))}
+.in .ring .fg{stroke-dashoffset:106}
+.ringcopy{position:absolute;text-align:center}.ringcopy b{font:900 50px/1 var(--disp);display:block}.ringcopy small{color:#929889;font-size:11px}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mini div{padding:12px 8px;border:1px solid var(--hair);border-radius:14px;text-align:center;font-size:12px;color:#aeb4a3}
+.mini strong{display:block;color:var(--text);font:700 22px var(--disp);letter-spacing:.5px}
+.nudge{margin-top:20px;border-top:1px solid var(--hair);padding-top:16px}
+.nudge small{color:var(--lime);font-size:12px;font-weight:600}.nudge p{font-size:14px;margin-top:6px;color:#d4d9c8}
+.right{display:grid;gap:18px}
+.orbitbox{min-height:260px;display:grid;place-items:center}
+.core{width:94px;height:94px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--lime);color:var(--bg);font:900 18px/1 var(--disp);z-index:2;box-shadow:0 0 50px rgba(200,255,0,.3)}
+.orbit{position:absolute;border:1px dashed rgba(255,255,255,.14);border-radius:50%;animation:spin 16s linear infinite}
+.o1{width:190px;height:190px}.o2{width:300px;height:300px;animation-duration:24s;animation-direction:reverse}
+.node{position:absolute;background:#1a1e14;border:1px solid var(--line);padding:6px 11px;border-radius:99px;font-size:11px;white-space:nowrap;animation:spin 16s linear infinite reverse}
+.o2 .node{animation-duration:24s;animation-direction:normal}
+.o1 .node:first-child{top:-14px;left:60px}.o1 .node:last-child{bottom:-14px;left:60px}
+.o2 .node:first-child{top:55px;right:-30px}.o2 .node:last-child{bottom:45px;left:-26px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.week{padding:22px}.week-head{display:flex;justify-content:space-between;font-size:13px;color:#aeb4a3}
+.days{display:flex;gap:8px;margin-top:18px}.day{flex:1;text-align:center}
+.day i{display:block;height:54px;border-radius:9px;background:#23271d;position:relative;overflow:hidden}
+.day.done i:after{content:"";position:absolute;inset:0;background:linear-gradient(var(--lime),#5d7608);transform:translateY(100%);transition:transform .9s var(--ease);transition-delay:calc(var(--k)*.12s + .4s)}
+.in .day.done i:after{transform:none}
+.day small{display:block;margin-top:6px;color:#737a68;font-size:11px}
 
-  nav ul {
-    list-style: none;
-    display: flex; gap: 36px;
-  }
-  nav a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  nav a:hover { color: var(--lime); }
+/* intelligence */
+.intel{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.chips span{font-size:13px;border:1px solid var(--hair);padding:8px 13px;border-radius:99px;color:#b8bdad;transition:.3s}
+.chips span:hover{border-color:var(--lime);color:var(--lime)}
+.signal{padding:26px;box-shadow:0 40px 100px rgba(0,0,0,.5)}
+.signal:before{content:"";position:absolute;left:0;right:0;height:90px;top:-100px;background:linear-gradient(transparent,rgba(200,255,0,.07),transparent);animation:scan 4.5s linear infinite;pointer-events:none}
+@keyframes scan{to{top:110%}}
+.sh{display:flex;justify-content:space-between;font-size:13px;color:#aeb4a3}
+.chart{height:200px;display:flex;align-items:end;gap:9px;margin:28px 0 18px}
+.bar{flex:1;height:var(--h);background:linear-gradient(var(--lime),#547000);border-radius:8px 8px 3px 3px;transform:scaleY(0);transform-origin:bottom;transition:transform 1.1s var(--ease);transition-delay:calc(var(--k)*.09s + .2s)}
+.in .bar{transform:none}
+.insight{border-top:1px solid var(--hair);padding-top:16px}.insight small{color:var(--lime);font-size:12px;font-weight:600}.insight p{font-size:14px;margin-top:6px}
 
-  .nav-cta {
-    background: var(--lime);
-    color: var(--dark) !important;
-    padding: 10px 22px;
-    border-radius: 2px;
-    font-weight: 500;
-    font-size: 13px !important;
-    letter-spacing: 1px;
-    transition: opacity 0.2s !important;
-  }
-  .nav-cta:hover { opacity: 0.85; color: var(--dark) !important; }
+/* wallet */
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.wcard{min-height:340px;padding:32px;border-radius:30px;background:radial-gradient(circle at 85% 8%,rgba(200,255,0,.2),transparent 40%),linear-gradient(145deg,#1c2213,#0d0f0a);border:1px solid rgba(200,255,0,.25);transform:perspective(900px) rotateY(-5deg) rotateX(3deg);transition:transform .2s linear;box-shadow:0 45px 110px #000;position:relative;overflow:hidden}
+.wcard:before{content:"";position:absolute;inset:-80%;background:linear-gradient(110deg,transparent 43%,rgba(255,255,255,.1) 50%,transparent 57%);animation:sweep 5.5s infinite}
+@keyframes sweep{0%,35%{transform:translateX(-30%)}70%,100%{transform:translateX(30%)}}
+.wlogo{font:900 25px var(--disp);letter-spacing:2px;position:relative}
+.bal{margin-top:78px;color:#a8ae9d;font-size:13px;position:relative}
+.points{font:900 68px/1 var(--disp);color:var(--lime);position:relative}.points small{font:500 14px var(--body);color:#a8ae9d;margin-left:6px}
+.wchips{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;position:relative}
+.wchips span{font-size:12px;border:1px solid rgba(255,255,255,.14);padding:7px 11px;border-radius:99px;color:#c0c5b5}
 
-  /* ─── HERO ─── */
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    padding: 0 24px;
-  }
+/* feedback */
+.fgrid{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:20px;margin-top:56px}
+.quote,.brand{padding:28px;min-height:290px;transition:.45s var(--ease)}
+.quote:hover,.brand:hover{transform:translateY(-6px);border-color:var(--line)}
+.stars{color:var(--lime);letter-spacing:4px}
+.quote blockquote{font:500 28px/1.2 var(--disp);margin:22px 0;text-transform:none}
+.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{font-size:12px;padding:6px 11px;background:rgba(255,255,255,.05);border-radius:99px;color:#b0b6a5}
+.link{position:relative;height:2px;background:rgba(200,255,0,.15);border-radius:2px;overflow:hidden}
+.link:after{content:"";position:absolute;inset:0;width:40%;background:var(--lime);box-shadow:0 0 14px var(--lime);animation:flow 1.8s ease-in-out infinite}
+@keyframes flow{from{transform:translateX(-100%)}to{transform:translateX(250%)}}
+.brand h3{font-size:30px}.metric{margin-top:22px}
+.mrow{display:flex;justify-content:space-between;font-size:13px;color:#b0b6a5;margin-bottom:7px}
+.meter{height:8px;background:#23271d;border-radius:99px;overflow:hidden}
+.meter i{display:block;height:100%;width:var(--w);background:var(--lime);border-radius:99px;transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease);transition-delay:calc(var(--k)*.15s + .3s)}
+.in .meter i{transform:none}
 
-  /* animated grid bg */
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(200,255,0,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(200,255,0,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    animation: gridShift 20s linear infinite;
-  }
-  @keyframes gridShift { to { background-position: 60px 60px; } }
+/* product loop */
+.loop{margin-top:50px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.li{padding:24px;min-height:210px;transition:.4s var(--ease)}
+.li:hover{transform:translateY(-6px);border-color:var(--line)}
+.li:not(:last-child):after{content:"";position:absolute;right:-17px;top:50%;width:18px;height:2px;background:var(--lime);z-index:3}
+.ico{width:54px;height:54px;border-radius:16px;background:rgba(200,255,0,.07);border:1px solid rgba(200,255,0,.2);display:grid;place-items:center;font-size:26px;margin-bottom:24px}
+.li h3{font-size:26px}.li p{font-size:14px;color:#939a88;margin-top:6px}
 
-  /* radial glow */
-  .hero::after {
-    content: '';
-    position: absolute;
-    width: 700px; height: 700px;
-    background: radial-gradient(circle, rgba(200,255,0,0.08) 0%, transparent 70%);
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-  }
+/* vending */
+.vend{text-align:center;overflow:hidden}
+.vend .title,.vend .lead,.vend .kicker{margin-inline:auto;justify-content:center}
+.vend .kicker:before{display:none}
+.amb{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.amb span{position:absolute;font-size:34px;opacity:.1;animation:drift 9s ease-in-out infinite;animation-delay:var(--dl);filter:blur(.5px)}
+@keyframes drift{50%{transform:translateY(-26px) rotate(12deg)}}
+.vm-wrap{margin-top:46px;position:relative;z-index:2;display:grid;justify-items:center;gap:18px}
+.vm{position:relative;width:min(360px,92vw);filter:drop-shadow(0 30px 70px rgba(200,255,0,.14));perspective:1400px}
+.vm-body{position:relative;background:linear-gradient(160deg,#1f221a,#0f110c);border:2px solid rgba(200,255,0,.22);border-radius:22px 22px 10px 10px;padding:0 18px 18px;text-align:left}
+.vm-strip{height:10px;background:var(--lime);border-radius:20px 20px 0 0;margin:-2px -20px 18px;box-shadow:0 0 20px rgba(200,255,0,.5)}
+.vm-screen{background:#0b1500;border:1px solid rgba(200,255,0,.3);border-radius:10px;height:62px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden}
+.vm-screen:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 2px,rgba(0,0,0,.22) 2px 3px);pointer-events:none}
+#screen{font:700 21px var(--disp);letter-spacing:3px;color:var(--lime);text-transform:uppercase;text-shadow:0 0 12px rgba(200,255,0,.6);transition:opacity .2s;text-align:center;padding:0 8px}
+#screen.dim{opacity:.35;text-shadow:none}
+#screen.blink{animation:blink .6s steps(2) infinite}
+@keyframes blink{50%{opacity:.3}}
+.vm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.slot{aspect-ratio:1/1.05;border-radius:10px;background:rgba(200,255,0,.04);border:1px solid rgba(200,255,0,.12);color:var(--text);font:500 11px var(--body);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;position:relative;transition:transform .25s var(--ease),border-color .25s,background .25s;overflow:hidden}
+.slot:before{content:"";position:absolute;left:8px;right:8px;top:50%;height:1px;background:rgba(255,255,255,.06);box-shadow:0 26px 0 rgba(255,255,255,.04),0 -26px 0 rgba(255,255,255,.04)}
+.slot .e{font-size:30px;line-height:1;position:relative;transition:opacity .3s}
+.slot em{font-style:normal;color:var(--muted);position:relative}
+.slot i{position:absolute;top:5px;right:6px;font:700 9px var(--body);color:var(--lime-d);font-style:normal}
+.vm:not(.open) .slot{pointer-events:none}
+.vm.open .slot{animation:slotOn .5s both;animation-delay:calc(var(--i)*70ms + .55s)}
+@keyframes slotOn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+.vm.open:not(.busy) .slot:hover{transform:translateY(-3px);border-color:var(--lime);background:rgba(200,255,0,.1)}
+.vm.busy .slot{pointer-events:none}
+.slot.active{border-color:var(--lime);background:rgba(200,255,0,.16);box-shadow:0 0 24px rgba(200,255,0,.3)}
+.slot.active .e{animation:shake .12s linear 6}
+.slot.empty .e{opacity:.12}
+@keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.tray{margin-top:16px;height:52px;border:1px solid rgba(255,255,255,.12);border-radius:10px;background:#07080a;position:relative;display:grid;place-items:center;font-size:11px;color:#5d6354;transition:box-shadow .4s,border-color .4s;overflow:hidden}
+.tray.got{border-color:var(--lime);box-shadow:inset 0 0 22px rgba(200,255,0,.25),0 0 22px rgba(200,255,0,.2);color:var(--lime)}
+.drop{position:absolute;font-size:30px;line-height:1;z-index:5;pointer-events:none;margin:-15px 0 0 -15px}
+.plus{position:absolute;font:900 24px var(--disp);color:var(--lime);z-index:6;pointer-events:none;text-shadow:0 0 14px rgba(200,255,0,.8)}
+.spark{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--lime);z-index:6;pointer-events:none}
+.vm-door{position:absolute;inset:0;border-radius:22px 22px 10px 10px;border:2px solid rgba(200,255,0,.25);background:linear-gradient(160deg,#272a21,#14160f);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:10;cursor:pointer;color:var(--text);font-family:inherit;transform-origin:left center;transition:transform 1s var(--ease),opacity .4s .6s;overflow:hidden}
+.vm-door:before{content:"";position:absolute;inset:-50%;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.07) 50%,transparent 58%);animation:sweep 5s infinite}
+.vm-door:after{content:"";position:absolute;right:14px;top:50%;width:9px;height:56px;margin-top:-28px;border-radius:5px;background:rgba(200,255,0,.45);box-shadow:0 0 14px rgba(200,255,0,.35)}
+.door-logo{font:900 34px var(--disp);letter-spacing:3px;position:relative}.door-logo span{color:var(--lime)}
+.door-hint{position:relative;font-size:14px;color:var(--bg);background:var(--lime);padding:10px 20px;border-radius:99px;font-weight:600;animation:glow 2s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 0 10px rgba(200,255,0,.12),0 0 34px rgba(200,255,0,.45)}}
+.vm.open .vm-door{transform:rotateY(-108deg);opacity:0;pointer-events:none}
+.vm-meta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
+.pill{border:1px solid var(--line);background:rgba(200,255,0,.05);border-radius:99px;padding:10px 18px;font-size:14px;color:#cfd5c3}.pill b{color:var(--lime);font:900 22px var(--disp);margin:0 4px}
+.vm-note{font-size:14px;color:var(--muted);min-height:22px}
 
-  .hero-tag {
-    background: rgba(200,255,0,0.12);
-    border: 1px solid rgba(200,255,0,0.3);
-    color: var(--lime);
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 6px 18px;
-    border-radius: 50px;
-    margin-bottom: 28px;
-    display: inline-block;
-    position: relative; z-index: 1;
-    animation: fadeUp 0.8s ease both;
-  }
+/* final */
+.final{text-align:center;overflow:hidden}
+.final:before{content:"";position:absolute;left:50%;top:50%;width:720px;max-width:150vw;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(200,255,0,.11),transparent 66%);animation:breathe 6s infinite}
+.final h2{font-size:clamp(54px,10vw,128px);line-height:.86;position:relative}
+.final p{max-width:560px;margin:26px auto 32px;color:var(--muted);position:relative}
+footer{border-top:1px solid var(--hair);padding:28px 0;color:#6f7664;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
-  .hero h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(56px, 10vw, 130px);
-    line-height: 0.9;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    position: relative; z-index: 1;
-    animation: fadeUp 0.9s ease 0.1s both;
-  }
-  .hero h1 em {
-    font-style: normal;
-    color: var(--lime);
-    display: block;
-    -webkit-text-stroke: 2px var(--lime);
-    color: transparent;
-  }
-  .hero h1 strong { color: var(--white); -webkit-text-stroke: 0; }
+@media(max-width:860px){
+nav ul{display:none}
+.steps,.intel,.wgrid,.stage{grid-template-columns:1fr}.steps:before{display:none}
+.intel,.wgrid{gap:40px}.fgrid{grid-template-columns:1fr}.link{width:2px;height:50px;margin:auto}.link:after{width:100%;height:40%;animation-name:flowv}
+@keyframes flowv{from{transform:translateY(-100%)}to{transform:translateY(250%)}}
+.loop{grid-template-columns:1fr 1fr}.li:not(:last-child):after{display:none}
+.wcard{transform:none}.orbit.o2{width:260px;height:260px}
+}
+@media(prefers-reduced-motion:reduce){
+*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.reveal,.hero p.sub,.actions{opacity:1;transform:none}.ln>span{transform:none}
+.bar,.meter i{transform:none}.ring .fg{stroke-dashoffset:106}.day.done i:after{transform:none}.steps:before{transform:none}
+}
 
-  .hero-sub {
-    margin-top: 28px;
-    color: var(--muted);
-    font-size: 16px;
-    max-width: 480px;
-    line-height: 1.7;
-    position: relative; z-index: 1;
-    animation: fadeUp 1s ease 0.2s both;
-  }
+/* ===== V2: visual communication layer ===== */
+.demo{display:inline-block;font-size:11px;font-weight:600;color:#c9d28d;border:1px dashed rgba(200,255,0,.45);border-radius:99px;padding:4px 11px;margin-top:16px}
+.seq{opacity:.2;transform:translateY(10px);transition:opacity .6s var(--ease),transform .6s var(--ease),border-color .6s,background .6s,box-shadow .6s}
+.seq.on{opacity:1;transform:none}
+.hl{border-radius:5px;padding:0 3px;transition:background .5s,color .5s}.hl.on{background:rgba(200,255,0,.22);color:var(--lime)}
+@keyframes flowv{from{transform:translateY(-100%)}to{transform:translateY(250%)}}
+@keyframes dash{to{stroke-dashoffset:-20}}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.4);opacity:0}}
+@keyframes bump{40%{transform:scale(1.08);filter:drop-shadow(0 0 18px rgba(200,255,0,.7))}}
+.sub-s{color:var(--muted);margin-top:14px;font-size:17px}
+.center{text-align:center}.center .kicker{justify-content:center}.center .kicker:before{display:none}.center .title,.center .lead{margin-inline:auto}
 
-  .hero-actions {
-    margin-top: 40px;
-    display: flex; gap: 16px; flex-wrap: wrap;
-    justify-content: center;
-    position: relative; z-index: 1;
-    animation: fadeUp 1s ease 0.3s both;
-  }
+/* 30-second read */
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.qc{padding:24px;transition:.4s var(--ease)}.qc:hover{transform:translateY(-6px);border-color:var(--line)}
+.qc small{color:var(--lime);font-size:13px;font-weight:600}.qc h3{font-size:30px;line-height:1;margin:10px 0 16px}
+.qc .chips{margin-top:0;gap:6px}.qc .chips span{font-size:12px;padding:6px 10px}
 
-  .btn-primary {
-    background: var(--lime);
-    color: var(--dark);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 16px 36px;
-    border: none; border-radius: 2px;
-    cursor: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-decoration: none;
-    display: inline-flex; align-items: center; gap: 8px;
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(200,255,0,0.3); }
+/* how FitOne thinks */
+.think{position:relative;display:grid;grid-template-columns:1fr 230px 1fr;gap:64px;align-items:center;margin-top:48px}
+.think svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.flowline{fill:none;stroke:rgba(200,255,0,.3);stroke-width:1.5;stroke-dasharray:4 6;animation:dash 1.2s linear infinite}
+.pt{fill:var(--lime);filter:drop-shadow(0 0 5px #c8ff00)}
+.col{display:grid;gap:12px;position:relative;z-index:2}
+.nd,.out{border:1px solid var(--hair);border-radius:14px;background:#10130c;transition:.45s var(--ease)}
+.nd{padding:13px 16px;font-size:14px;display:flex;gap:10px;align-items:center}.nd i{font-style:normal;font-size:18px}
+.out{padding:15px 17px}.out b{font:900 18px var(--disp);letter-spacing:1px;text-transform:uppercase;display:block}.out span{font-size:13px;color:#aeb4a3}
+.out.hot{border-color:var(--lime);background:rgba(200,255,0,.08);box-shadow:0 0 30px rgba(200,255,0,.16);transform:translateX(6px)}
+.core2{aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 35% 30%,#e3ff6a,#b4e600 70%);color:var(--bg);font:900 30px/.95 var(--disp);position:relative;z-index:2;box-shadow:0 0 70px rgba(200,255,0,.35)}
+.core2:before,.core2:after{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid var(--lime);animation:ping 2.8s ease-out infinite}.core2:after{animation-delay:1.4s}
+.core2 small{display:block;font:700 12px var(--body);letter-spacing:2px;margin-top:6px}
 
-  .btn-outline {
-    background: transparent;
-    color: var(--white);
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 16px 36px;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 2px;
-    cursor: none;
-    transition: border-color 0.2s, color 0.2s;
-    text-decoration: none;
-  }
-  .btn-outline:hover { border-color: var(--lime); color: var(--lime); }
+/* Claude */
+.cl{margin-top:44px;display:grid;justify-items:center}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:780px}
+.cchip{font-size:14px;padding:10px 16px;border-radius:99px;border:1px solid var(--hair);background:#10130c}
+.cchip.o{border-color:var(--line);background:rgba(200,255,0,.06);color:#e6f4b0}
+.vline{width:2px;height:64px;background:rgba(200,255,0,.16);position:relative;overflow:hidden;margin:8px 0}
+.vline:after{content:"";position:absolute;left:0;width:100%;height:40%;background:var(--lime);box-shadow:0 0 12px var(--lime);animation:flowv 1.6s ease-in-out infinite}
+.cbox{width:min(540px,100%);padding:30px;text-align:center;border-radius:28px;border:1px solid rgba(200,255,0,.38);background:radial-gradient(circle at 50% 0,rgba(200,255,0,.17),transparent 62%),#0e110a;position:relative;overflow:hidden}
+.cbox:before{content:"";position:absolute;left:0;right:0;height:70px;top:-80px;background:linear-gradient(transparent,rgba(200,255,0,.1),transparent);animation:scan 4s linear infinite}
+.cbox h3{font-size:clamp(54px,9vw,92px);line-height:.88;position:relative}.cbox p{font-size:13px;letter-spacing:2px;color:var(--lime);text-transform:uppercase;font-weight:600;position:relative}
+.badge{display:inline-block;margin-top:18px;font-size:12px;font-weight:600;border:1px solid var(--line);color:#d9ec9a;padding:6px 13px;border-radius:99px;position:relative}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px;width:100%;max-width:780px}
+.cp{padding:20px;text-align:left;opacity:.75}.cp.me{opacity:1;border-color:var(--line)}
+.cp h4{font:900 20px var(--disp);text-transform:uppercase}
+.flowrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:12px}
+.flowrow span{padding:7px 11px;border-radius:99px;border:1px solid var(--hair)}.cp.me .flowrow span{border-color:var(--line);color:#e6f4b0}.flowrow em{color:var(--lime);font-style:normal}
+.scale{margin-top:30px;padding:26px;max-width:780px;width:100%;text-align:left}
+.stabs{display:flex;gap:8px;margin:14px 0 22px;flex-wrap:wrap}
+.stabs button{font:500 13px var(--body);color:#b6bcaa;background:transparent;border:1px solid var(--hair);border-radius:99px;padding:8px 16px;cursor:pointer;transition:.3s}
+.stabs button[aria-pressed=true]{background:var(--lime);color:var(--bg);border-color:var(--lime)}
+.srow{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:center;margin-bottom:12px;font-size:13px;color:#b0b6a5}
+.sbar{height:10px;background:#23271d;border-radius:99px;overflow:hidden}.sbar i{display:block;height:100%;width:8%;background:linear-gradient(90deg,#5d7608,var(--lime));border-radius:99px;transition:width 1.1s var(--ease)}
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+/* status */
+.stat{margin-top:46px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative}
+.stat:before{content:"";position:absolute;left:8%;right:8%;top:41px;height:2px;background:linear-gradient(90deg,transparent,var(--lime),transparent);background-size:200% 100%;opacity:.4;animation:sl 3s linear infinite}
+@keyframes sl{to{background-position:-200% 0}}
+.sc{padding:22px;position:relative;transition:.4s var(--ease);min-height:210px}.sc:hover{transform:translateY(-6px);border-color:var(--line)}
+.ind{width:38px;height:38px;position:relative;margin-bottom:20px;display:grid;place-items:center}
+.ind:before{content:"";width:18px;height:18px;border-radius:50%;background:var(--lime);position:relative;z-index:2}
+.ind:after{content:"";position:absolute;inset:3px;border-radius:50%;border:2px solid var(--lime)}
+.ind.live:after{animation:ping 2s ease-out infinite}
+.ind.build:before{background:transparent;border:2px dashed var(--lime);width:26px;height:26px;animation:spin 5s linear infinite}.ind.build:after{display:none}
+.ind.proto:before{background:conic-gradient(var(--lime) 0 50%,transparent 0);border:2px solid var(--lime);width:24px;height:24px}.ind.proto:after{inset:-2px;border-style:dashed;opacity:.5;animation:spin 9s linear infinite}
+.ind.phys:before{border-radius:6px;width:20px;height:20px;animation:pulse 2s infinite}.ind.phys:after{border-radius:9px}
+.sbdg{display:inline-block;font:700 11px var(--body);letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:99px;margin-bottom:12px}
+.sbdg.a{background:var(--lime);color:var(--bg)}.sbdg.b{border:1px solid var(--lime);color:var(--lime)}.sbdg.c{border:1px dashed var(--lime);color:#d9ec9a}
+.sc h3{font-size:22px;line-height:1.05;margin-bottom:8px}.sc p{font-size:13px;color:#939a88}
 
-  /* ─── VENDING MACHINE DEMO ─── */
-  .demo-section {
-    padding: 120px 48px;
-    text-align: center;
-    position: relative;
-  }
+/* wallet demo */
+.chain{display:grid;gap:0;justify-items:start}
+.cn{width:100%;padding:16px 20px;border:1px solid var(--hair);border-radius:16px;background:#10130c;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cn b{font:900 20px var(--disp);text-transform:uppercase;letter-spacing:.5px}.cn span{font-size:13px;color:#aeb4a3}
+.cn.on{border-color:var(--lime);background:rgba(200,255,0,.07);box-shadow:0 0 28px rgba(200,255,0,.12)}
+.cv{width:2px;height:22px;margin-left:30px;background:rgba(200,255,0,.2)}
+.outs2{display:flex;gap:8px;flex-wrap:wrap;width:100%}.outs2 span{flex:1;min-width:96px;text-align:center;padding:12px 8px;border:1px solid var(--hair);border-radius:14px;font:900 17px var(--disp);text-transform:uppercase;background:#10130c}
+.outs2.on span{border-color:var(--lime);color:var(--lime)}
+.tx{display:flex;justify-content:space-between;font-size:13px;color:#c0c5b5;padding:9px 0;border-top:1px solid rgba(255,255,255,.08);position:relative}
+.tx b{color:var(--lime);font-weight:600}.txs{margin-top:18px;position:relative}
+.points.bump{animation:bump .7s}.wcard .demo{position:absolute;top:30px;right:30px;margin:0;font-size:10px}
+.wtools{margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--lime);
-    margin-bottom: 16px;
-  }
+/* feedback transformation */
+.fb{margin-top:44px;display:grid;justify-items:center;gap:0;max-width:760px;margin-inline:auto}
+.fbq,.fbi{width:100%;padding:26px}.fbq small,.fbi small,.fc small{color:var(--lime);font-size:12px;font-weight:600;display:block}
+.fbq blockquote{font:500 clamp(24px,4vw,32px)/1.2 var(--disp);text-transform:none;margin-top:10px}
+.fbarrow{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;color:var(--lime);font-weight:600;margin:12px 0}
+.fbarrow .vline{height:40px;margin:0}
+.fbchips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%}
+.fc{padding:16px;border:1px solid var(--line);border-radius:16px;background:rgba(200,255,0,.05)}.fc b{font:900 22px var(--disp);text-transform:uppercase;display:block;margin-top:4px}
+.fbi{border-color:rgba(200,255,0,.4)}.fbi p{font:700 clamp(22px,3.6vw,30px)/1.15 var(--disp);text-transform:none;margin-top:8px;min-height:2.4em}
 
-  .section-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-    font-size: clamp(36px, 6vw, 72px);
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 48px;
-  }
+/* loop timeline */
+.lp{display:grid;grid-template-columns:.85fr 1fr;gap:70px;align-items:start}
+.lp-head{position:sticky;top:120px}
+.tl{position:relative;padding-left:0}
+.spine{position:absolute;left:21px;top:32px;bottom:32px;width:2px;background:#23271d}
+.spine i{display:block;width:100%;height:0;background:var(--lime);box-shadow:0 0 14px var(--lime)}
+.ti{display:flex;gap:20px;align-items:center;padding:20px 0;opacity:.32;transition:opacity .5s}.ti.lit{opacity:1}
+.ti b{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#161a11;border:1px solid var(--hair);font:900 18px var(--disp);position:relative;z-index:2;transition:.5s}
+.ti.lit b{background:var(--lime);color:var(--bg);border-color:var(--lime);box-shadow:0 0 24px rgba(200,255,0,.4)}
+.ti h3{font-size:clamp(26px,3.4vw,34px);line-height:1}.ti small{color:var(--muted);font-size:13px}
 
-  /* THE VENDING MACHINE */
-  .machine-wrapper {
-    display: inline-block;
-    position: relative;
-    cursor: none;
-  }
-
-  .machine-container {
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
-    filter: drop-shadow(0 0 60px rgba(200,255,0,0.15));
-    transition: filter 0.3s;
-  }
-  .machine-container:hover { filter: drop-shadow(0 0 80px rgba(200,255,0,0.35)); }
-
-  .machine-body {
-    width: 320px;
-    background: linear-gradient(160deg, #1e1e1e 0%, #111 100%);
-    border-radius: 18px 18px 8px 8px;
-    border: 2px solid rgba(200,255,0,0.2);
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .machine-top-strip {
-    height: 8px;
-    background: var(--lime);
-    border-radius: 14px 14px 0 0;
-    margin: -20px -20px 20px;
-  }
-
-  .machine-screen {
-    background: #0d1a00;
-    border: 1px solid rgba(200,255,0,0.3);
-    border-radius: 8px;
-    height: 60px;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 16px;
-    overflow: hidden;
-    position: relative;
-  }
-  .machine-screen-text {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--lime);
-    letter-spacing: 3px;
-    animation: blink 2s step-end infinite;
-  }
-  @keyframes blink { 50% { opacity: 0.4; } }
-
-  .machine-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-
-  .machine-slot {
-    background: rgba(200,255,0,0.05);
-    border: 1px solid rgba(200,255,0,0.1);
-    border-radius: 6px;
-    height: 70px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 4px;
-    font-size: 22px;
-    transition: background 0.2s, transform 0.2s;
-    position: relative;
-  }
-  .machine-slot span {
-    font-size: 10px;
-    color: var(--muted);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-  }
-  .machine-container:hover .machine-slot {
-    background: rgba(200,255,0,0.08);
-  }
-
-  /* DOOR OVERLAY */
-  .machine-door {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(160deg, #232323 0%, #181818 100%);
-    border-radius: 16px;
-    border: 2px solid rgba(200,255,0,0.15);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 12px;
-    z-index: 10;
-    transform-origin: left center;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s;
-    backface-visibility: hidden;
-  }
-  .machine-door .door-logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 28px; font-weight: 900;
-    color: var(--white); letter-spacing: 3px;
-  }
-  .machine-door .door-logo span { color: var(--lime); }
-  .machine-door .door-hint {
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    animation: pulse 2s ease infinite;
-  }
-  .machine-door .door-handle {
-    position: absolute;
-    right: 14px; top: 50%;
-    transform: translateY(-50%);
-    width: 10px; height: 50px;
-    background: rgba(200,255,0,0.3);
-    border-radius: 5px;
-  }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-
-  .machine-container.opened .machine-door {
-    transform: perspective(800px) rotateY(-110deg);
-    opacity: 0;
-  }
-
-  /* BURST PRODUCTS */
-  .burst-particle {
-    position: fixed;
-    font-size: 28px;
-    pointer-events: none;
-    z-index: 1000;
-    animation: burstFly 1.2s cubic-bezier(0.1, 0.9, 0.3, 1) forwards;
-    opacity: 0;
-  }
-  @keyframes burstFly {
-    0% { opacity: 1; transform: translate(0,0) rotate(0deg) scale(0.5); }
-    60% { opacity: 1; }
-    100% { opacity: 0; transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(1.2); }
-  }
-
-  /* ─── FEATURES ─── */
-  .features {
-    padding: 100px 48px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2px;
-    margin-top: 60px;
-  }
-
-  .feature-card {
-    background: var(--card);
-    padding: 40px 32px;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.3s;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: background 0.3s, opacity 0.6s ease, transform 0.6s ease;
-  }
-  .feature-card.visible { opacity: 1; transform: translateY(0); }
-  .feature-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--lime);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
-  }
-  .feature-card:hover::before { transform: scaleX(1); }
-  .feature-card:hover { background: #1f1f1f; }
-
-  .feature-icon {
-    font-size: 36px; margin-bottom: 20px;
-    display: block;
-  }
-  .feature-card h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 22px; font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-  }
-  .feature-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
-
-  /* ─── STATS ─── */
-  .stats {
-    background: var(--lime);
-    padding: 80px 48px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    text-align: center;
-  }
-
-  .stat-item h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 72px; font-weight: 900;
-    color: var(--dark);
-    line-height: 1;
-  }
-  .stat-item p {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(10,10,10,0.6);
-    margin-top: 8px;
-  }
-
-  /* ─── PRODUCTS MARQUEE ─── */
-  .marquee-section {
-    padding: 80px 0;
-    overflow: hidden;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .marquee-track {
-    display: flex; gap: 60px;
-    animation: marquee 20s linear infinite;
-    white-space: nowrap;
-  }
-  .marquee-item {
-    display: flex; align-items: center; gap: 16px;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 24px; font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: rgba(255,255,255,0.15);
-    flex-shrink: 0;
-  }
-  .marquee-item span { color: var(--lime); font-size: 20px; }
-  @keyframes marquee { to { transform: translateX(-50%); } }
-
-  /* ─── CTA ─── */
-  .cta-section {
-    padding: 160px 48px;
-    text-align: center;
-    position: relative;
-  }
-  .cta-section::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at center, rgba(200,255,0,0.06) 0%, transparent 65%);
-    pointer-events: none;
-  }
-  .cta-section h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(40px, 7vw, 96px);
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 0.95;
-    position: relative;
-  }
-  .cta-section h2 span { color: var(--lime); }
-  .cta-section p {
-    color: var(--muted); font-size: 16px;
-    max-width: 500px; margin: 24px auto 48px;
-    line-height: 1.7;
-  }
-
-  /* ─── FOOTER ─── */
-  footer {
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding: 40px 48px;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 20px;
-  }
-  footer .logo { font-size: 20px; }
-  footer p { color: var(--muted); font-size: 13px; }
-
-  /* ─── SCROLL REVEAL ─── */
-  .reveal {
-    opacity: 0; transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible { opacity: 1; transform: none; }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 768px) {
-    nav { padding: 16px 20px; }
-    nav ul { display: none; }
-    .demo-section, .features, .cta-section { padding: 80px 24px; }
-    .stats { padding: 60px 24px; }
-    footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
-  }
+@media(max-width:860px){
+.quick{grid-template-columns:1fr 1fr}
+.think{grid-template-columns:1fr;gap:60px}.think .ins{grid-template-columns:1fr 1fr}.think .outs{grid-template-columns:1fr 1fr}.think .core2{width:170px;margin:auto}.out.hot{transform:none}
+.cmp{grid-template-columns:1fr}.stat{grid-template-columns:1fr 1fr}.stat:before{display:none}
+.lp{grid-template-columns:1fr;gap:30px}.lp-head{position:static}
+.srow{grid-template-columns:100px 1fr}
+}
+@media(max-width:520px){.quick,.stat,.fbchips,.think .outs{grid-template-columns:1fr}.think .ins{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){.seq{opacity:1;transform:none}.ti{opacity:1}.flowline{animation:none}}
 </style>
 </head>
 <body>
-
-<div class="cursor" id="cursor"></div>
-
-<!-- NAV -->
-<nav>
-  <a href="#" class="logo">FitOne<span>.pro</span></a>
-  <ul>
-    <li><a href="#demo">Demo</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Machine</a></li>
-  </ul>
+<div class="progress" id="progress"></div>
+<nav id="nav">
+<a class="logo" href="#top">FITONE<span>.PRO</span></a>
+<ul id="links"><li><a href="#think">How it thinks</a></li><li><a href="#claude">Claude</a></li><li><a href="#status">Status</a></li><li><a href="#wallet">Wallet</a></li><li><a href="#brands">Brands</a></li><li><a href="#vending">Machine</a></li></ul>
+<a class="navcta" href="#vending">Try the machine</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-tag">  Smart Gym Vending — Redefined</div>
-  <h1>
-    <strong>Fuel Your</strong>
-    <em>Gains</em>
-    <strong>24/7</strong>
-  </h1>
-  <p class="hero-sub">Smart vending machines engineered for gyms. Protein, supplements, and recovery — dispensed instantly, stocked intelligently.</p>
-  <div class="hero-actions">
-    <a href="#demo" class="btn-primary">▶ See It in Action</a>
-    <a href="#features" class="btn-outline">Explore Features</a>
-  </div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee-section">
-  <div class="marquee-track" id="marqueeTrack">
-    <div class="marquee-item"><span>●</span> Protein Shakes</div>
-    <div class="marquee-item"><span>●</span> Pre-Workout</div>
-    <div class="marquee-item"><span>●</span> BCAAs</div>
-    <div class="marquee-item"><span>●</span> Energy Bars</div>
-    <div class="marquee-item"><span>●</span> Creatine</div>
-    <div class="marquee-item"><span>●</span> Electrolytes</div>
-    <div class="marquee-item"><span>●</span> Recovery Drinks</div>
-    <div class="marquee-item"><span>●</span> Vitamins</div>
-    <div class="marquee-item"><span>●</span> Protein Shakes</div>
-    <div class="marquee-item"><span>●</span> Pre-Workout</div>
-    <div class="marquee-item"><span>●</span> BCAAs</div>
-    <div class="marquee-item"><span>●</span> Energy Bars</div>
-    <div class="marquee-item"><span>●</span> Creatine</div>
-    <div class="marquee-item"><span>●</span> Electrolytes</div>
-    <div class="marquee-item"><span>●</span> Recovery Drinks</div>
-    <div class="marquee-item"><span>●</span> Vitamins</div>
-  </div>
+<header class="hero" id="top">
+<div class="grid"></div><div class="orb" id="orb"></div>
+<div class="wrap" id="heroWrap">
+<div class="tag"><i class="dot"></i>Building the intelligence layer for everyday health</div>
+<h1><span class="ln"><span style="--i:0">Your health.</span></span><span class="ln"><span style="--i:1"><span class="outline">Understood.</span> Rewarded.</span></span></h1>
+<p class="sub">An intelligent health ecosystem that turns everyday activity into one simple next step.</p>
+<div class="actions"><a class="btn primary" href="#think">See how it works</a><a class="btn" href="#vending">Meet the physical layer</a></div>
 </div>
+<div class="scrollcue">Scroll to follow the signal<i></i></div>
+</header>
 
-<!-- DEMO / MACHINE -->
-<section class="demo-section" id="demo">
-  <p class="section-label reveal">Interactive Demo</p>
-  <h2 class="section-title reveal">Click to Open<br>the Machine</h2>
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+<span>Understand <b>✦</b></span><span>Motivate <b>✦</b></span><span>Move <b>✦</b></span><span>Reward <b>✦</b></span><span>Listen <b>✦</b></span><span>Improve <b>✦</b></span>
+<span>Understand <b>✦</b></span><span>Motivate <b>✦</b></span><span>Move <b>✦</b></span><span>Reward <b>✦</b></span><span>Listen <b>✦</b></span><span>Improve <b>✦</b></span>
+</div></div>
 
-  <div class="machine-wrapper" id="machineWrapper">
-    <div class="machine-container" id="machine">
-      <!-- DOOR -->
-      <div class="machine-door" id="machineDoor">
-        <div class="door-logo">FitOne<span>.pro</span></div>
-        <div class="door-hint">Click to open</div>
-        <div class="door-handle"></div>
-      </div>
+<section class="pad" id="what" style="padding-bottom:20px"><div class="wrap"><div class="quick">
+<div class="qc card reveal"><small>What is it?</small><h3>An intelligent health ecosystem</h3><div class="chips"><span>App</span><span>Wallet</span><span>Machines</span></div></div>
+<div class="qc card reveal" style="--d:.07s"><small>What does it do?</small><h3>Turns habits into one next step</h3><div class="chips"><span>Activity</span><span>Nutrition</span><span>Behaviour</span><span>Progress</span></div></div>
+<div class="qc card reveal" style="--d:.14s"><small>What's different?</small><h3>Five layers, one loop</h3><div class="chips"><span>Intelligence</span><span>Motivation</span><span>Wallet</span><span>Physical</span><span>Brand feedback</span></div></div>
+<div class="qc card reveal" style="--d:.21s"><small>Why Claude?</small><h3>The reasoning layer</h3><div class="chips"><span>Long histories</span><span>Patterns</span><span>Feedback</span></div></div>
+</div></div></section>
 
-      <!-- BODY -->
-      <div class="machine-body">
-        <div class="machine-top-strip"></div>
-        <div class="machine-screen">
-          <div class="machine-screen-text">FITONE.PRO</div>
-        </div>
-        <div class="machine-grid">
-          <div class="machine-slot">🥤<span>Protein</span></div>
-          <div class="machine-slot">⚡<span>Pre-WO</span></div>
-          <div class="machine-slot">🍫<span>Bar</span></div>
-          <div class="machine-slot">💊<span>BCAAs</span></div>
-          <div class="machine-slot">🧃<span>Energy</span></div>
-          <div class="machine-slot">🧴<span>Creatine</span></div>
-          <div class="machine-slot">💧<span>Electro</span></div>
-          <div class="machine-slot">🍑<span>Gummies</span></div>
-          <div class="machine-slot">🥜<span>Nuts</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="pad" id="think"><div class="wrap">
+<div class="reveal"><div class="kicker">How FitOne thinks</div><h2 class="title">Signals in. Simple actions out.</h2></div>
+<div class="think reveal" id="think-d" style="--d:.1s">
+<svg id="thinkSvg" aria-hidden="true"></svg>
+<div class="col ins"><div class="nd"><i>🏃</i>Activity</div><div class="nd"><i>🍽️</i>Nutrition</div><div class="nd"><i>🎯</i>Goals</div><div class="nd"><i>🗂️</i>Health history</div><div class="nd"><i>🔁</i>Consistency</div></div>
+<div class="core2" id="core"><div>FITONE<br>INTELLIGENCE<small>CORE</small></div></div>
+<div class="col outs">
+<div class="out"><b>Personal guidance</b><span>“Take a 10-minute walk now”</span></div>
+<div class="out"><b>Health Wallet</b><span>Consistency → rewards</span></div>
+<div class="out"><b>Progress intelligence</b><span>Understand what changed this week</span></div>
+<div class="out"><b>Product feedback</b><span>Turn real experiences into useful insights</span></div>
+</div></div></div></section>
 
-  <p style="color: var(--muted); font-size: 13px; margin-top: 32px; letter-spacing: 1px;">
-    SCROLL DOWN TO DISCOVER MORE
-  </p>
-</section>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="stat-item">
-    <h2>3+</h2>
-    <p>Machines Deployed</p>
-  </div>
-  <div class="stat-item">
-    <h2>24/7</h2>
-    <p>Always Available</p>
-  </div>
-  <div class="stat-item">
-    <h2>98%</h2>
-    <p>Uptime Guarantee</p>
-  </div>
-  <div class="stat-item">
-    <h2>30s</h2>
-    <p>Average Restock Alert</p>
-  </div>
+<section class="pad" id="claude"><div class="wrap center">
+<div class="reveal"><div class="kicker">Building with Claude</div><h2 class="title">FitOne × Claude</h2><p class="lead">The intelligence behind healthier decisions.</p></div>
+<div class="cl reveal" style="--d:.1s">
+<div class="row"><span class="cchip">Activity</span><span class="cchip">Nutrition</span><span class="cchip">Goals</span><span class="cchip">Health history</span><span class="cchip">Behaviour patterns</span><span class="cchip">User feedback</span></div>
+<div class="vline"></div>
+<div class="cbox"><h3>Claude</h3><p>Intelligence layer</p><span class="badge">Designed around Claude · Currently building</span></div>
+<div class="vline"></div>
+<div class="row"><span class="cchip o">Personalised motivation</span><span class="cchip o">Pattern understanding</span><span class="cchip o">Progress summaries</span><span class="cchip o">Simple next actions</span><span class="cchip o">Feedback intelligence</span></div>
+<div class="cmp">
+<div class="cp card"><h4>Chatbot add-on</h4><div class="flowrow"><span>User asks</span><em>→</em><span>Bot answers</span></div></div>
+<div class="cp card me"><h4>FitOne × Claude (design)</h4><div class="flowrow"><span>History + signals</span><em>→</em><span>Claude reasons</span><em>→</em><span>Next action</span><em>↺</em></div></div>
 </div>
+<div class="scale card" id="scale"><div class="sh"><span>More history, more intelligence work</span><span class="demo" style="margin:0">Illustrative</span></div>
+<div class="stabs" id="scTabs"><button data-k="w" aria-pressed="false">Week 1</button><button data-k="m" aria-pressed="false">Month 3</button><button data-k="y" aria-pressed="true">Year 1</button></div>
+<div class="srow"><span>Health history</span><div class="sbar"><i></i></div></div>
+<div class="srow"><span>User feedback</span><div class="sbar"><i></i></div></div>
+<div class="srow"><span>Reasoning work</span><div class="sbar"><i></i></div></div></div>
+</div></div></section>
 
-<!-- FEATURES -->
-<section class="features" id="features">
-  <p class="section-label reveal" style="text-align:center">Why FitOne Pro</p>
-  <h2 class="section-title reveal" style="text-align:center">Built for<br>the Gym Floor</h2>
-  <div class="features-grid">
-    <div class="feature-card">
-      <span class="feature-icon">📲</span>
-      <h3>Touchless Smart Pay</h3>
-      <p>UPI, tap-to-pay, QR — zero friction checkout so members never miss a rep.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🧠</span>
-      <h3>AI Inventory Engine</h3>
-      <p>Predicts stock demand by peak hours and member purchase patterns. Auto-reorder built in.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">❄️</span>
-      <h3>Dual-Zone Cooling</h3>
-      <p>Chilled and ambient zones in one machine. Keep shakes cold, bars fresh, powders dry.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">📊</span>
-      <h3>Live Dashboard</h3>
-      <p>Real-time sales, stock levels, and revenue analytics from any device, anywhere.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🔒</span>
-      <h3>Member Loyalty Lock-in</h3>
-      <p>Integrate with your gym app. Members earn points on every purchase automatically.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🛠️</span>
-      <h3>Zero Downtime Service</h3>
-      <p>Remote diagnostics + on-site SLA. If it breaks, we fix it before your members notice.</p>
-    </div>
-  </div>
-</section>
+<section class="pad" id="status" style="padding-top:30px"><div class="wrap">
+<div class="reveal"><div class="kicker">Building FitOne</div><h2 class="title">What you can use, and what's coming.</h2><span class="demo">Demo data on this page is illustrative, not user traction</span></div>
+<div class="stat reveal" style="--d:.1s">
+<div class="sc card"><div class="ind live"></div><span class="sbdg a">Interactive</span><h3>FitOne experience</h3><p>Explore it on this page.</p></div>
+<div class="sc card"><div class="ind build"></div><span class="sbdg b">Building</span><h3>Personal health intelligence</h3><p>Designed around Claude.</p></div>
+<div class="sc card"><div class="ind build"></div><span class="sbdg b">Building</span><h3>Health Wallet</h3><p>Demo flow shown below.</p></div>
+<div class="sc card"><div class="ind proto"></div><span class="sbdg c">Prototype</span><h3>Brand feedback intelligence</h3><p>Concept demo shown below.</p></div>
+<div class="sc card"><div class="ind phys"></div><span class="sbdg a">Physical layer</span><h3>Smart fitness vending</h3><p>Interactive demo at the end.</p></div>
+</div></div></section>
 
-<!-- PRODUCTS MARQUEE 2 -->
-<div class="marquee-section" id="products">
-  <div class="marquee-track" style="animation-direction:reverse; gap:60px;">
-    <div class="marquee-item"><span>→</span> CrossFit Gyms</div>
-    <div class="marquee-item"><span>→</span> Hotel Fitness Centres</div>
-    <div class="marquee-item"><span>→</span> Corporate Wellness</div>
-    <div class="marquee-item"><span>→</span> University Gyms</div>
-    <div class="marquee-item"><span>→</span> Boutique Studios</div>
-    <div class="marquee-item"><span>→</span> Sports Academies</div>
-    <div class="marquee-item"><span>→</span> CrossFit Gyms</div>
-    <div class="marquee-item"><span>→</span> Hotel Fitness Centres</div>
-    <div class="marquee-item"><span>→</span> Corporate Wellness</div>
-    <div class="marquee-item"><span>→</span> University Gyms</div>
-    <div class="marquee-item"><span>→</span> Boutique Studios</div>
-    <div class="marquee-item"><span>→</span> Sports Academies</div>
-  </div>
+<section class="pad" id="day" style="padding-top:30px"><div class="wrap">
+<div class="reveal"><div class="kicker">The product, in motion</div><h2 class="title">See your health moving, not just numbers.</h2><span class="demo">Demo interface</span></div>
+<div class="stage">
+<div class="phone card reveal" id="phone">
+<div class="phone-top"><span>Today</span><span class="lime">On track</span></div>
+<div class="ringbox"><svg class="ring" viewBox="0 0 160 160" aria-hidden="true"><circle class="bgc" cx="80" cy="80" r="70"/><circle class="fg" cx="80" cy="80" r="70"/></svg><div class="ringcopy"><b><span data-count="76">0</span>%</b><small>Daily rhythm</small></div></div>
+<div class="mini"><div><strong data-count="7400">0</strong>steps</div><div><strong>42m</strong>training</div><div><strong>3/4</strong>habits</div></div>
+<div class="nudge"><small>One useful nudge</small><p>Momentum dips late afternoon. A 10-minute walk keeps today on track.</p></div>
 </div>
+<div class="right">
+<div class="signal card reveal" style="--d:.1s"><div class="sh"><span>What changed this week</span><span class="lime">+12%</span></div>
+<div class="chart" style="height:150px"><i class="bar" style="--h:44%;--k:0"></i><i class="bar" style="--h:58%;--k:1"></i><i class="bar" style="--h:76%;--k:2"></i><i class="bar" style="--h:48%;--k:3"></i><i class="bar" style="--h:90%;--k:4"></i><i class="bar" style="--h:70%;--k:5"></i><i class="bar" style="--h:100%;--k:6"></i></div>
+<div class="insight"><small>Progress intelligence</small><p>Best training days follow higher-protein breakfasts.</p></div></div>
+<div class="week card reveal" style="--d:.2s"><div class="week-head"><span>Consistency this week</span><span class="lime">5 of 7 days</span></div>
+<div class="days"><div class="day done" style="--k:0"><i></i><small>M</small></div><div class="day done" style="--k:1"><i></i><small>T</small></div><div class="day done" style="--k:2"><i></i><small>W</small></div><div class="day" style="--k:3"><i></i><small>T</small></div><div class="day done" style="--k:4"><i></i><small>F</small></div><div class="day done" style="--k:5"><i></i><small>S</small></div><div class="day" style="--k:6"><i></i><small>S</small></div></div></div>
+</div></div></div></section>
 
-<!-- CTA -->
-<section class="cta-section" id="contact">
-  <h2>Ready to <span>Power</span><br>Your Gym?</h2>
-  <p>Join 3+ gym owners who've upgraded their member experience and unlocked a new revenue stream.</p>
-  <a href="mailto:connect@fitone.pro" class="btn-primary" style="font-size:15px; padding:18px 48px;">
-    Book a Free Demo →
-  </a>
-</section>
+<section class="pad" id="wallet"><div class="wrap">
+<div class="reveal"><div class="kicker">Health Wallet</div><h2 class="title">Consistency becomes momentum.</h2><span class="demo">Demo data</span></div>
+<div class="wgrid" id="wDemo" style="margin-top:44px">
+<div>
+<div class="wcard reveal" id="wcard"><div class="wlogo">FITONE <span class="lime">HEALTH WALLET</span></div><span class="demo">Demo</span><div class="bal">Health points</div><div class="points" id="pointsBox"><span id="walletPts" data-count="2840">0</span><small>pts</small></div>
+<div class="txs"><div class="tx seq tx-new" data-seq="3"><span>🏋️ Morning workout</span><b>+40</b></div><div class="tx"><span>🎯 Challenge complete</span><b>+80</b></div><div class="tx"><span>✅ Daily check-in</span><b>+40</b></div></div></div>
+<div class="wtools"><button class="btn" id="wReplay">Replay demo</button></div>
+</div>
+<div class="chain reveal" style="--d:.1s">
+<div class="cn seq" data-seq="1"><b>Healthy action</b><span>Morning workout</span></div><div class="cv"></div>
+<div class="cn seq" data-seq="2"><b>Consistency</b><span>Streak continues</span></div><div class="cv"></div>
+<div class="cn seq" data-seq="3"><b>Health points</b><span>+40</span></div><div class="cv"></div>
+<div class="outs2 seq" data-seq="4"><span>Reward</span><span>Purchase</span><span>Challenge</span></div>
+</div></div></div></section>
 
-<!-- FOOTER -->
-<footer>
-  <a href="#" class="logo">FitOne<span>.pro</span></a>
-  <p>© 2026 FitOne Pro. All rights reserved.</p>
-  <p style="color: var(--muted); font-size:12px;">connect@fitone.pro</p>
-</footer>
+<section class="pad" id="brands"><div class="wrap">
+<div class="reveal"><div class="kicker">User to brand feedback</div><h2 class="title">From a comment to a product decision.</h2><span class="demo">Illustrative example</span></div>
+<div class="fb" id="fb">
+<div class="fbq card"><small>User experience</small><blockquote>“<span class="hl" data-seq="1">Great product</span> but the <span class="hl" data-seq="2">serving feels too heavy</span> <span class="hl" data-seq="3">before morning workouts</span>.”</blockquote></div>
+<div class="fbarrow seq" data-seq="4"><div class="vline"></div>Claude / FitOne analysis</div>
+<div class="fbchips"><div class="fc seq" data-seq="5"><small>Taste</small><b>Positive</b></div><div class="fc seq" data-seq="6"><small>Serving size</small><b>Common friction</b></div><div class="fc seq" data-seq="7"><small>Use case</small><b>Morning workout</b></div></div>
+<div class="fbarrow seq" data-seq="8"><div class="vline"></div></div>
+<div class="fbi card seq fbi-c" data-seq="9"><small>Brand insight</small><p id="insightTxt" data-text="Users like the product but want a lighter pre-workout serving."></p></div>
+<div class="wtools"><button class="btn" id="fbReplay">Replay</button></div>
+</div></div></section>
+
+<section class="pad" id="loop"><div class="wrap lp">
+<div class="lp-head reveal"><div class="kicker">The FitOne loop</div><h2 class="title">Every action makes the next one smarter.</h2></div>
+<div class="tl" id="tl"><div class="spine"><i id="spineFill"></i></div>
+<div class="ti"><b>1</b><div><h3>Live healthier</h3><small>You</small></div></div>
+<div class="ti"><b>2</b><div><h3>FitOne understands</h3><small>Intelligence</small></div></div>
+<div class="ti"><b>3</b><div><h3>Get a simple next action</h3><small>Intelligence</small></div></div>
+<div class="ti"><b>4</b><div><h3>Build consistency</h3><small>You</small></div></div>
+<div class="ti"><b>5</b><div><h3>Health Wallet rewards</h3><small>Wallet</small></div></div>
+<div class="ti"><b>6</b><div><h3>Share real experience</h3><small>You</small></div></div>
+<div class="ti"><b>7</b><div><h3>Brands understand users</h3><small>Feedback</small></div></div>
+<div class="ti"><b>8</b><div><h3>Better wellness products</h3><small>Brands</small></div></div>
+<div class="ti"><b>↺</b><div><h3 class="lime">Back to step 1</h3><small>The loop repeats</small></div></div>
+</div></div></section>
+
+<section class="pad vend" id="vending">
+<div class="amb" aria-hidden="true"><span style="left:4%;top:12%;--dl:0s">🥤</span><span style="left:90%;top:18%;--dl:1.2s">💪</span><span style="left:8%;top:48%;--dl:2s">⚡</span><span style="left:88%;top:55%;--dl:.6s">🍫</span><span style="left:5%;top:82%;--dl:1.6s">💧</span><span style="left:92%;top:86%;--dl:2.4s">🥜</span></div>
+<div class="wrap">
+<div class="reveal"><div class="kicker">The physical layer of FitOne</div><h2 class="title">Smart fitness, in the real world.</h2>
+<p class="lead">One real-world touchpoint of a larger system. Interactive demo; points are illustrative.</p></div>
+<div class="vm-wrap reveal" style="--d:.1s">
+<div class="vm" id="vm">
+<div class="vm-body" id="vmBody">
+<div class="vm-strip"></div>
+<div class="vm-screen"><div id="screen">FITONE.PRO</div></div>
+<div class="vm-grid" id="vmGrid"></div>
+<div class="tray" id="tray"><span id="trayTxt">Pick-up</span></div>
+</div>
+<button class="vm-door" id="door" aria-label="Open the vending machine"><div class="door-logo">FITONE<span>.PRO</span></div><div class="door-hint">Tap to open</div></button>
+</div>
+<div class="vm-meta"><div class="pill">Wallet <b id="vmPts">0</b> pts</div><button class="btn" id="close" hidden>Close machine</button></div>
+<div class="vm-note" id="note" aria-live="polite"></div>
+</div></div></section>
+
+<section class="pad final"><div class="wrap">
+<h2 class="reveal">Small actions.<br><span class="lime">Smarter health.</span></h2>
+<p class="reveal" style="--d:.1s">One loop that gets smarter with every action.</p>
+<a class="btn primary reveal" style="--d:.2s" href="#top">Back to the start</a></div></section>
+<footer><div class="wrap"><span>FitOne.pro</span><span>Health intelligence that moves with you</span><a href="mailto:connect@fitone.pro">connect@fitone.pro</a></div></footer>
 
 <script>
-  // ─── CURSOR ───
-  const cursor = document.getElementById('cursor');
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-  });
-  document.querySelectorAll('a, button, .machine-container').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
-  });
+(()=>{
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 
-  // ─── VENDING MACHINE CLICK / BURST ───
-  const machine = document.getElementById('machine');
-  const door = document.getElementById('machineDoor');
-  let opened = false;
+/* scroll progress + nav state */
+const bar=$('#progress'),nav=$('#nav'),orb=$('#orb');
+const onScroll=()=>{const h=document.documentElement.scrollHeight-innerHeight,y=scrollY;
+bar.style.transform=`scaleX(${h>0?y/h:0})`;nav.classList.toggle('scrolled',y>30);
+if(!reduce&&orb)orb.style.translate=`0 ${y*.18}px`};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  const products = ['🥤','⚡','🍫','💊','🧃','🧴','💧','🍑','🥜','🏋️','🔥','💪'];
+/* active link */
+const links=$$('#links a');
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+['think','claude','status','wallet','brands','vending'].forEach(id=>spy.observe(document.getElementById(id)));
 
-  machine.addEventListener('click', () => {
-    if (opened) return;
-    opened = true;
-    machine.classList.add('opened');
+/* count up */
+function count(el){const t=+el.dataset.count;if(reduce){el.textContent=t.toLocaleString();return}
+const s=performance.now(),d=1600;(function f(n){const p=Math.min((n-s)/d,1),v=Math.round(t*(1-Math.pow(1-p,4)));el.textContent=v.toLocaleString();if(p<1)requestAnimationFrame(f)})(s)}
+const counted=new WeakSet();
 
-    // Burst particles
-    const rect = machine.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;t.classList.add('in');
+t.querySelectorAll('[data-count]').forEach(c=>{if(!counted.has(c)){counted.add(c);count(c)}});
+if(t.dataset.count&&!counted.has(t)){counted.add(t);count(t)}io.unobserve(t)}),{threshold:.18});
+$$('.reveal').forEach(x=>io.observe(x));
 
-    for (let i = 0; i < 24; i++) {
-      setTimeout(() => {
-        const el = document.createElement('div');
-        el.className = 'burst-particle';
-        el.textContent = products[Math.floor(Math.random() * products.length)];
-        const angle = (Math.random() * 360) * Math.PI / 100;
-        const dist = 150 + Math.random() * 250;
-        const tx = Math.cos(angle) * dist;
-        const ty = Math.sin(angle) * dist - 80;
-        const rot = (Math.random() - 0.5) * 720;
-        el.style.cssText = `left:${cx}px; top:${cy}px; --tx:${tx}px; --ty:${ty}px; --rot:${rot}deg; animation-delay: ${Math.random()*0.3}s;`;
-        document.body.appendChild(el);
-        setTimeout(() => el.remove(), 1600);
-      }, i * 40);
-    }
+/* tilt: wallet + phone */
+if(!reduce&&matchMedia('(hover:hover)').matches){
+const wc=$('#wcard');
+wc.addEventListener('pointermove',e=>{const r=wc.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;wc.style.transform=`perspective(900px) rotateY(${x*14-3}deg) rotateX(${-y*10+3}deg) translateY(-4px)`});
+wc.addEventListener('pointerleave',()=>wc.style.transform='');
+const hw=$('#heroWrap');$('#top').addEventListener('pointermove',e=>{const x=(e.clientX-innerWidth/2)/innerWidth,y=(e.clientY-innerHeight/2)/innerHeight;hw.style.transform=`translate3d(${x*8}px,${y*8}px,0)`});
+}
 
-    // Reset after 4s
-    setTimeout(() => {
-      opened = false;
-      machine.classList.remove('opened');
-    }, 4000);
-  });
 
-  // ─── SCROLL REVEAL ───
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        // feature cards stagger
-        if (e.target.classList.contains('feature-card')) {
-          const cards = document.querySelectorAll('.feature-card');
-          cards.forEach((card, i) => {
-            setTimeout(() => card.classList.add('visible'), i * 120);
-          });
-        }
-      }
-    });
-  }, { threshold: 0.15 });
+/* ===== V2 interactions ===== */
+const mk=(t,a)=>{const e=document.createElementNS('http://www.w3.org/2000/svg',t);for(const k in a)e.setAttribute(k,a[k]);return e};
+const think=$('#think-d');
+function drawThink(){
+if(!think)return;const svg=$('#thinkSvg'),b=think.getBoundingClientRect(),core=$('#core').getBoundingClientRect(),v=innerWidth<=860;
+svg.setAttribute('viewBox',`0 0 ${b.width} ${b.height}`);svg.innerHTML='';
+const pt=(r,s)=>[(s==='l'?r.left:s==='r'?r.right:r.left+r.width/2)-b.left,(s==='t'?r.top:s==='b'?r.bottom:r.top+r.height/2)-b.top];
+const link=(A,sa,C,sc,i)=>{const[x1,y1]=pt(A,sa),[x2,y2]=pt(C,sc);
+const d=v?`M${x1},${y1} C${x1},${y1+(y2-y1)*.5} ${x2},${y2-(y2-y1)*.5} ${x2},${y2}`:`M${x1},${y1} C${x1+(x2-x1)*.5},${y1} ${x2-(x2-x1)*.5},${y2} ${x2},${y2}`;
+svg.appendChild(mk('path',{d,class:'flowline'}));
+if(!reduce)for(let k=0;k<2;k++){const c=mk('circle',{r:3,class:'pt'});c.appendChild(mk('animateMotion',{path:d,dur:(2.4+i*.25)+'s',repeatCount:'indefinite',begin:(k*1.2+i*.35)+'s'}));svg.appendChild(c)}};
+$$('#think-d .ins .nd').forEach((n,i)=>link(n.getBoundingClientRect(),v?'b':'r',core,v?'t':'l',i));
+$$('#think-d .outs .out').forEach((n,i)=>link(core,v?'b':'r',n.getBoundingClientRect(),v?'t':'l',i));
+}
+if(think){new ResizeObserver(drawThink).observe(think);addEventListener('load',drawThink);document.fonts&&document.fonts.ready.then(drawThink);setTimeout(drawThink,900);
+let hi=0;setInterval(()=>{const o=$$('#think-d .out');o.forEach(x=>x.classList.remove('hot'));if(!document.hidden&&!reduce)o[hi++%o.length].classList.add('hot')},1500)}
 
-  document.querySelectorAll('.reveal, .feature-card').forEach(el => observer.observe(el));
+/* scale tabs */
+const sc={w:[8,6,10],m:[38,30,46],y:[86,78,94]};let scT;
+function stage(k){$$('#scTabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));$$('#scale .sbar i').forEach((i,n)=>i.style.width=sc[k][n]+'%')}
+$$('#scTabs button').forEach(b=>b.addEventListener('click',()=>{clearInterval(scT);stage(b.dataset.k)}));
+stage(reduce?'y':'w');
+const once=(el,fn,th)=>{if(!el)return;new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();fn()}},{threshold:th||.3}).observe(el)};
+once($('#scale'),()=>{if(reduce){stage('y');return}const o=['w','m','y'];let n=0;stage('w');scT=setInterval(()=>stage(o[++n%3]),2600)});
+
+/* sequence helper */
+function clearSeq(r){(r._t||[]).forEach(clearTimeout);r._t=[];r.querySelectorAll('[data-seq]').forEach(e=>e.classList.remove('on'))}
+function playSeq(r,gap,cb,start){clearSeq(r);[...r.querySelectorAll('[data-seq]')].sort((a,b)=>a.dataset.seq-b.dataset.seq).forEach((el,i)=>{r._t.push(setTimeout(()=>{el.classList.add('on');cb&&cb(el)},reduce?0:(start||0)+i*gap))})}
+function typeTo(el){const t=el.dataset.text;if(reduce){el.textContent=t;return}el.textContent='';let i=0;const iv=setInterval(()=>{el.textContent=t.slice(0,++i);if(i>=t.length)clearInterval(iv)},28)}
+function num(el,a,b,d){if(reduce){el.textContent=b.toLocaleString();return}const s=performance.now();(function f(n){const p=Math.min((n-s)/d,1);el.textContent=Math.round(a+(b-a)*p).toLocaleString();if(p<1)requestAnimationFrame(f)})(s)}
+
+/* feedback transformation */
+const fb=$('#fb'),ins=$('#insightTxt');
+const fbCb=el=>{if(el.classList.contains('fbi-c'))typeTo(ins)};
+const fbRun=()=>{ins.textContent='';playSeq(fb,650,fbCb)};
+once(fb,fbRun,.35);$('#fbReplay').addEventListener('click',fbRun);
+
+/* wallet transaction demo */
+const wd=$('#wDemo'),wp=$('#walletPts'),pb=$('#pointsBox');
+const wCb=el=>{if(el.classList.contains('tx-new')){num(wp,2840,2880,900);pb.classList.remove('bump');void pb.offsetWidth;pb.classList.add('bump')}};
+const wRun=()=>{wp.textContent='2,840';pb.classList.remove('bump');playSeq(wd,750,wCb)};
+once(wd,()=>setTimeout(wRun,1900),.4);$('#wReplay').addEventListener('click',wRun);
+
+/* scroll-linked loop */
+const tl=$('#tl'),fill=$('#spineFill'),tis=$$('#tl .ti');
+function loopScroll(){const r=tl.getBoundingClientRect(),mid=innerHeight*.58,p=Math.min(Math.max((mid-r.top)/r.height,0),1);fill.style.height=(p*100)+'%';tis.forEach(t=>{const q=t.getBoundingClientRect();t.classList.toggle('lit',q.top+q.height/2<mid)})}
+addEventListener('scroll',loopScroll,{passive:true});addEventListener('resize',loopScroll);loopScroll();
+
+/* ===== vending machine ===== */
+const items=[['🥤','Protein',40],['⚡','Pre-WO',30],['🍫','Bar',20],['💊','BCAAs',35],['🧃','Energy',25],['🧴','Creatine',45],['💧','Electro',15],['🍑','Gummies',20],['🥜','Nuts',20]];
+const vm=$('#vm'),grid=$('#vmGrid'),screen=$('#screen'),tray=$('#tray'),body=$('#vmBody'),note=$('#note'),trayTxt=$('#trayTxt'),ptsEl=$('#vmPts'),closeBtn=$('#close');
+let pts=0,busy=false,timers=[];
+const later=(fn,ms)=>{const t=setTimeout(fn,ms);timers.push(t);return t};
+const say=(t,cls='')=>{screen.textContent=t;screen.className=cls};
+items.forEach(([e,n,p],i)=>{const b=document.createElement('button');b.className='slot';b.style.setProperty('--i',i);b.setAttribute('aria-label',`${n}, ${p} points`);
+b.innerHTML=`<i>${p}</i><span class="e">${e}</span><em>${n}</em>`;b.addEventListener('click',()=>pick(b,e,n,p));grid.appendChild(b)});
+
+function openM(){if(vm.classList.contains('open'))return;vm.classList.add('open');closeBtn.hidden=false;say('Booting…','dim');
+later(()=>say('Select a product'),900);note.textContent='Choose any product. Each pick earns Health Wallet points.'}
+function closeM(){timers.forEach(clearTimeout);timers=[];busy=false;vm.classList.remove('open','busy');closeBtn.hidden=true;
+$$('.slot').forEach(s=>s.classList.remove('active','empty'));tray.classList.remove('got');trayTxt.textContent='Pick-up';say('FITONE.PRO');note.textContent='';$$('.drop,.plus,.spark').forEach(n=>n.remove())}
+$('#door').addEventListener('click',openM);closeBtn.addEventListener('click',closeM);
+
+function rel(el){const a=el.getBoundingClientRect(),b=body.getBoundingClientRect();return{x:a.left-b.left+a.width/2,y:a.top-b.top+a.height/2}}
+
+function pick(slot,emoji,name,p){
+if(busy||slot.classList.contains('empty'))return;busy=true;vm.classList.add('busy');
+slot.classList.add('active');say('Dispensing…','blink');note.textContent=name+' on its way…';
+const s=rel(slot.querySelector('.e')),t=rel(tray);
+later(()=>{
+slot.classList.remove('active');slot.classList.add('empty');
+const d=document.createElement('div');d.className='drop';d.textContent=emoji;d.style.left=s.x+'px';d.style.top=s.y+'px';body.appendChild(d);
+const dy=t.y-s.y,dx=t.x-s.x;
+if(reduce||!d.animate){d.style.transform=`translate(${dx}px,${dy}px)`}else{
+d.animate([
+{transform:'translate(0,0) rotate(0) scale(1)',easing:'cubic-bezier(.5,0,.9,.6)'},
+{transform:`translate(${dx*.9}px,${dy}px) rotate(24deg) scale(1)`,offset:.62,easing:'cubic-bezier(.2,.6,.4,1)'},
+{transform:`translate(${dx}px,${dy-26}px) rotate(-10deg) scale(1.05)`,offset:.78,easing:'cubic-bezier(.6,0,.9,.6)'},
+{transform:`translate(${dx}px,${dy}px) rotate(0) scale(1)`}],{duration:950,fill:'forwards'})}
+later(()=>{tray.classList.add('got');trayTxt.textContent='';sparkle(t);
+pts+=p;ptsEl.textContent=pts.toLocaleString();say('Enjoy! +'+p+' pts');note.textContent=`${name} dispensed. ${p} points added to your Health Wallet.`;
+plus(t,p)},reduce?50:950);
+later(()=>{d.remove();tray.classList.remove('got');trayTxt.textContent='Pick-up';
+vm.classList.remove('busy');busy=false;say('Select a product');note.textContent='Pick another, or close the machine.'},reduce?900:3000);
+later(()=>slot.classList.remove('empty'),6500);
+},reduce?100:1000)}
+
+function sparkle(t){if(reduce)return;for(let i=0;i<12;i++){const s=document.createElement('i');s.className='spark';s.style.left=t.x+'px';s.style.top=t.y+'px';body.appendChild(s);
+const a=Math.random()*Math.PI*2,r=40+Math.random()*50;
+s.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:`translate(${Math.cos(a)*r}px,${Math.sin(a)*r-24}px) scale(0)`,opacity:0}],{duration:700+Math.random()*300,easing:'cubic-bezier(.1,.8,.3,1)'}).onfinish=()=>s.remove()}}
+function plus(t,p){const el=document.createElement('div');el.className='plus';el.textContent='+'+p;el.style.left=(t.x-16)+'px';el.style.top=(t.y-10)+'px';body.appendChild(el);
+if(reduce){setTimeout(()=>el.remove(),1500);return}
+el.animate([{transform:'translateY(0)',opacity:0},{transform:'translateY(-26px)',opacity:1,offset:.25},{transform:'translateY(-90px)',opacity:0}],{duration:1500,easing:'ease-out'}).onfinish=()=>el.remove()}
+})();
 </script>
 </body>
 </html>
