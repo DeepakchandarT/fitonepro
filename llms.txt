@@ -5,6 +5,9 @@
 Website: https://fitone.pro/
 Contact: connect@fitone.pro
 Language: English (India)
+Founded: May 2026
+Location: Chennai, Tamil Nadu, India
+Founder: Deepakchandar T
 
 ## What FitOne is building
 
@@ -16,18 +19,23 @@ Language: English (India)
 
 ## Why Claude is core to the product
 
-FitOne is designed around Claude as its reasoning and intelligence layer, not as a standalone chatbot. Claude will interpret longitudinal health and behavioural context, identify useful patterns, personalise motivation, summarise progress, analyse product feedback and translate complex signals into simple actions. As user histories, interactions and feedback grow, Claude API usage grows with them.
+FitOne plans to use Claude as a reasoning and intelligence layer, not as a standalone chatbot. Claude will interpret product and nutritional information, answer user questions, generate explainable recommendations from stated preferences, and analyse anonymised machine feedback and inventory trends. FitOne does not diagnose conditions or prescribe treatment.
 
 ## Current stage
 
 FitOne is in active early-stage development. The website contains interactive product demonstrations and clearly labels illustrative data. It does not present demo values as verified user traction.
 
+The public website prototype does not request or store personal health information. Any future account-based collection will require explicit consent and an updated data policy before launch.
+
 ## Important sections
 
 - Product overview: https://fitone.pro/#what
+- Company profile: https://fitone.pro/#about
+- Product evidence: https://fitone.pro/#evidence
 - Intelligence flow: https://fitone.pro/#think
 - Claude integration: https://fitone.pro/#claude
 - Development status: https://fitone.pro/#status
 - Health Wallet: https://fitone.pro/#wallet
 - Brand feedback intelligence: https://fitone.pro/#brands
 - Smart vending layer: https://fitone.pro/#vending
+- Privacy, health disclaimer and prototype terms: https://fitone.pro/#trust

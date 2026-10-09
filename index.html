@@ -39,7 +39,11 @@
       "@id": "https://fitone.pro/#organization",
       "name": "FitOne.pro",
       "url": "https://fitone.pro/",
-      "description": "An intelligent fitness and wellness ecosystem connecting personal health guidance, rewards, feedback and smart vending."
+      "foundingDate": "2026-05",
+      "foundingLocation": { "@type": "Place", "name": "Chennai, Tamil Nadu, India" },
+      "founder": { "@type": "Person", "name": "Deepakchandar T" },
+      "email": "connect@fitone.pro",
+      "description": "An early-stage health-technology startup building an AI-assisted healthy vending and everyday wellness platform."
     },
     {
       "@type": "WebSite",
@@ -307,6 +311,22 @@ nav ul{display:none}
 .qc small{color:var(--lime);font-size:13px;font-weight:600}.qc h3{font-size:30px;line-height:1;margin:10px 0 16px}
 .qc .chips{margin-top:0;gap:6px}.qc .chips span{font-size:12px;padding:6px 10px}
 
+/* company verification */
+.verify{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:start}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+.fact{padding:18px;border:1px solid var(--hair);border-radius:16px;background:#10130c}
+.fact small{display:block;color:var(--lime);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.fact strong{font:900 22px var(--disp);text-transform:uppercase}
+.founder{padding:30px}.founder-top{display:flex;align-items:center;gap:18px;margin-bottom:24px}
+.avatar{width:72px;height:72px;display:grid;place-items:center;border-radius:20px;background:var(--lime);color:var(--bg);font:900 30px var(--disp)}
+.founder h3{font-size:34px;line-height:1}.founder p,.truth p{color:var(--muted)}
+.truth{margin-top:18px;padding:24px}.truth h3{font-size:27px;margin-bottom:8px}
+.evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.evidence article{padding:20px;min-height:150px}.evidence h3{font-size:23px}.evidence p{font-size:13px;color:var(--muted);margin-top:7px}
+.legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}
+.legal-card{padding:26px}.legal-card h3{font-size:28px;margin-bottom:10px}.legal-card p{font-size:13px;color:var(--muted)}
+.legal-card a{color:var(--lime)}.updated{display:block;margin-top:15px;font-size:11px;color:#737a68}
+
 /* how FitOne thinks */
 .think{position:relative;display:grid;grid-template-columns:1fr 230px 1fr;gap:64px;align-items:center;margin-top:48px}
 .think svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
@@ -396,6 +416,7 @@ nav ul{display:none}
 
 @media(max-width:860px){
 .quick{grid-template-columns:1fr 1fr}
+.verify{grid-template-columns:1fr}.evidence,.legal-grid{grid-template-columns:1fr}
 .think{grid-template-columns:1fr;gap:60px}.think .ins{grid-template-columns:1fr 1fr}.think .outs{grid-template-columns:1fr 1fr}.think .core2{width:170px;margin:auto}.out.hot{transform:none}
 .cmp{grid-template-columns:1fr}.stat{grid-template-columns:1fr 1fr}.stat:before{display:none}
 .lp{grid-template-columns:1fr;gap:30px}.lp-head{position:static}
@@ -409,7 +430,7 @@ nav ul{display:none}
 <div class="progress" id="progress"></div>
 <nav id="nav">
 <a class="logo" href="#top">FITONE<span>.PRO</span></a>
-<ul id="links"><li><a href="#think">How it thinks</a></li><li><a href="#claude">Claude</a></li><li><a href="#status">Status</a></li><li><a href="#wallet">Wallet</a></li><li><a href="#brands">Brands</a></li><li><a href="#vending">Machine</a></li></ul>
+<ul id="links"><li><a href="#about">About</a></li><li><a href="#think">How it thinks</a></li><li><a href="#claude">Claude</a></li><li><a href="#status">Status</a></li><li><a href="#vending">Machine</a></li></ul>
 <a class="navcta" href="#vending">Try the machine</a>
 </nav>
 
@@ -436,6 +457,19 @@ nav ul{display:none}
 <div class="qc card reveal" style="--d:.21s"><small>Why Claude?</small><h3>The reasoning layer</h3><div class="chips"><span>Long histories</span><span>Patterns</span><span>Feedback</span></div></div>
 </div></div></section>
 
+<section class="pad" id="about"><div class="wrap verify">
+<div class="reveal"><div class="kicker">Company profile</div><h2 class="title">FitOne, clearly.</h2>
+<p class="lead">FitOne.pro is an early-stage health-technology startup founded in May 2026 in Chennai, India. We are building an AI-assisted healthy vending and everyday wellness platform that helps people make simpler, better-informed choices.</p>
+<div class="facts"><div class="fact"><small>Founded</small><strong>May 2026</strong></div><div class="fact"><small>Based in</small><strong>Chennai, India</strong></div><div class="fact"><small>Stage</small><strong>Prototype</strong></div><div class="fact"><small>Contact</small><strong>fitone.pro</strong></div></div></div>
+<div class="reveal" style="--d:.12s"><article class="founder card"><div class="founder-top"><div class="avatar" aria-hidden="true">DT</div><div><small class="lime">Founder</small><h3>Deepakchandar T</h3></div></div><p>Software engineering student and product builder developing FitOne from Chennai. The current focus is validating the healthy-vending experience and building the software intelligence layer responsibly.</p></article>
+<article class="truth card"><h3>Built in public, described honestly.</h3><p>This site presents an interactive product prototype. Illustrative interfaces and numbers are labelled as demos; they are not represented as customer traction, clinical outcomes or deployed-machine statistics.</p></article></div>
+</div></section>
+
+<section class="pad" id="evidence" style="padding-top:30px"><div class="wrap">
+<div class="reveal"><div class="kicker">Product evidence</div><h2 class="title">From concept to working prototype.</h2><p class="lead">FitOne currently combines a public interactive experience, a healthy-vending interaction prototype and an in-development AI reasoning layer.</p></div>
+<div class="evidence reveal" style="--d:.1s"><article class="card"><span class="sbdg a">Interactive</span><h3>Public product demo</h3><p>Visitors can explore the health, rewards and vending flows directly on this website.</p></article><article class="card"><span class="sbdg c">Prototype</span><h3>Healthy vending layer</h3><p>A transparent prototype of product selection and Health Wallet interactions.</p></article><article class="card"><span class="sbdg b">Building</span><h3>AI assistance</h3><p>Claude is planned as the reasoning layer for explainable guidance, summaries and feedback analysis.</p></article></div>
+</div></section>
+
 <section class="pad" id="think"><div class="wrap">
 <div class="reveal"><div class="kicker">How FitOne thinks</div><h2 class="title">Signals in. Simple actions out.</h2></div>
 <div class="think reveal" id="think-d" style="--d:.1s">
@@ -450,7 +484,7 @@ nav ul{display:none}
 </div></div></div></section>
 
 <section class="pad" id="claude"><div class="wrap center">
-<div class="reveal"><div class="kicker">Building with Claude</div><h2 class="title">FitOne × Claude</h2><p class="lead">The intelligence behind healthier decisions.</p></div>
+<div class="reveal"><div class="kicker">Building with Claude</div><h2 class="title">FitOne × Claude</h2><p class="lead">Claude is planned to interpret product and nutritional information, answer questions, generate explainable recommendations from user-stated preferences, and analyse anonymised machine feedback and inventory trends. FitOne does not diagnose conditions or prescribe treatment.</p></div>
 <div class="cl reveal" style="--d:.1s">
 <div class="row"><span class="cchip">Activity</span><span class="cchip">Nutrition</span><span class="cchip">Goals</span><span class="cchip">Health history</span><span class="cchip">Behaviour patterns</span><span class="cchip">User feedback</span></div>
 <div class="vline"></div>
@@ -558,7 +592,16 @@ nav ul{display:none}
 <h2 class="reveal">Small actions.<br><span class="lime">Smarter health.</span></h2>
 <p class="reveal" style="--d:.1s">One loop that gets smarter with every action.</p>
 <a class="btn primary reveal" style="--d:.2s" href="#top">Back to the start</a></div></section>
-<footer><div class="wrap"><span>FitOne.pro</span><span>Health intelligence that moves with you</span><a href="mailto:connect@fitone.pro">connect@fitone.pro</a></div></footer>
+
+<section class="pad" id="trust"><div class="wrap">
+<div class="reveal"><div class="kicker">Trust and transparency</div><h2 class="title">Health technology, with clear boundaries.</h2></div>
+<div class="legal-grid reveal" style="--d:.1s">
+<article class="legal-card card" id="privacy"><h3>Privacy</h3><p>This public prototype does not ask for or store personal health information. Interactive values shown here are illustrative and remain within the page experience. Before any account-based product launches, FitOne will publish a complete data policy and obtain explicit consent for any personal information collected.</p><span class="updated">Effective 9 October 2026</span></article>
+<article class="legal-card card" id="health"><h3>Health disclaimer</h3><p>FitOne provides general wellness information and decision support. It is not a medical device and does not provide diagnosis, treatment or emergency guidance. Product and nutrition information should be checked against individual allergies and professional medical advice.</p><span class="updated">Effective 9 October 2026</span></article>
+<article class="legal-card card" id="terms"><h3>Prototype terms</h3><p>This website is an early-stage demonstration. Features, availability and illustrative outputs may change. Demo recommendations must not be treated as medical advice. For questions, partnerships or vending support, contact <a href="mailto:connect@fitone.pro">connect@fitone.pro</a>.</p><span class="updated">Effective 9 October 2026</span></article>
+</div></div></section>
+
+<footer><div class="wrap"><span>FitOne.pro · Founded May 2026 · Chennai, India</span><span><a href="#privacy">Privacy</a> · <a href="#health">Health</a> · <a href="#terms">Terms</a></span><a href="mailto:connect@fitone.pro">connect@fitone.pro</a></div></footer>
 
 <script>
 (()=>{
@@ -575,7 +618,7 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
 /* active link */
 const links=$$('#links a');
 const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
-['think','claude','status','wallet','brands','vending'].forEach(id=>spy.observe(document.getElementById(id)));
+['about','think','claude','status','vending'].forEach(id=>spy.observe(document.getElementById(id)));
 
 /* count up */
 function count(el){const t=+el.dataset.count;if(reduce){el.textContent=t.toLocaleString();return}
