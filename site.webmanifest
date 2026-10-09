@@ -1,0 +1,11 @@
+{
+  "name": "FitOne.pro",
+  "short_name": "FitOne",
+  "description": "Health intelligence that moves with you.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0b08",
+  "theme_color": "#0a0b08",
+  "lang": "en-IN"
+}
